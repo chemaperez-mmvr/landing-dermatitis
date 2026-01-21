@@ -1,0 +1,159 @@
+Actúa como diseñador web senior + front-end developer + copywriter B2B para sector FARMA. Quiero que construyas una landing page moderna, profesional e innovadora para un curso dirigido a profesionales sanitarios. El objetivo es informar y llevar al usuario a una plataforma existente mediante un botón de “Acceder / Login”.
+
+ENTREGA
+- Proyecto listo para ejecutar en Replit.
+- Una sola página (single-page) con scroll.
+- Implementación: HTML + CSS + JS (vanilla). Sin frameworks. Puedes usar Google Fonts.
+- Diseño responsive perfecto.
+- Animaciones sutiles y profesionales (hover, fade-in on scroll opcional).
+- Velocidad: optimiza CSS/JS, sin dependencias pesadas.
+
+ASSETS (IMPORTANTÍSIMO)
+- En el repo de Replit habrá una carpeta /assets con estos archivos:
+  1) /assets/logo-inspira.png  (logo INS PIRA)
+  2) /assets/logo-novo-nordisk.png (logo Novo Nordisk)
+- Usa logo-inspira.png como marca principal en el header.
+- Incluye logo-novo-nordisk.png en una sección de “Confianza / Cliente” pero con texto neutral NO legal:
+  - “Cliente / entidad” o “Proyecto para” o “Organización” (NO afirmar partnership si no lo indica el usuario).
+- Asegúrate de que los logos se vean bien sobre fondo oscuro (usa contenedor con fondo claro si hace falta).
+
+ESTILO VISUAL (PHARMA + INNOVACIÓN)
+- Estética premium tipo farma/biotech: limpia, seria, tecnológica.
+- Paleta basada en logos:
+  - Fondo principal oscuro (near-black/charcoal).
+  - Azul corporativo profundo (inspirado en Novo Nordisk).
+  - Acento verde (inspirado en INS PIRA).
+  - Mucho espacio en blanco/aire dentro de cards.
+- Tipografía moderna: Inter / Manrope / Sora.
+- Componentes con bordes suaves (12-16px), sombras sutiles, separadores finos.
+- Botones grandes y claros.
+
+FUNCIONALIDAD CLAVE
+- CTA principal “Acceder a la plataforma” en header y en varias secciones.
+- El CTA debe ir a: {{LOGIN_URL}}
+- CTA secundario: “Solicitar información”:
+  - O bien mailto: {{EMAIL_CONTACTO}}
+  - O un formulario simple (nombre, email, mensaje) que muestre “Gracias, te contactaremos” sin backend.
+
+CONTENIDO EN ESPAÑOL (tono profesional, sin promesas médicas)
+- Evita claims clínicos no demostrables.
+- No dar consejos médicos. Es formación.
+
+ESTRUCTURA OBLIGATORIA
+
+1) HEADER sticky
+- Logo INS PIRA (imagen)
+- Menú: Programa, Metodología, Módulos, Acceso, FAQ
+- Botón primario “Acceder” -> {{LOGIN_URL}}
+
+2) HERO (primera pantalla)
+- H1 potente:
+  “Entrena decisiones clínicas en Dermatitis Atópica con casos prácticos y agentes de voz con IA”
+- Subheadline:
+  “Programa modular para profesionales sanitarios. Aprendizaje aplicado, simulación conversacional y recursos de referencia en una plataforma única.”
+- 3 bullets:
+  - “Casos clínicos prácticos con agentes de voz con IA”
+  - “Contenido modular, claro y orientado a la práctica”
+  - “Recursos y enlaces de interés para consulta”
+- CTA primario: “Acceder a la plataforma” -> {{LOGIN_URL}}
+- CTA secundario: “Solicitar información” -> {{EMAIL_CONTACTO}} o abre formulario
+- A la derecha: una “Course Card” con:
+  - “4 módulos”
+  - “Vídeo + práctica”
+  - “Casos IA”
+  - “Recursos descargables”
+- Incluye un mockup visual (sin imágenes externas): un contenedor con gradiente azul/verde y un área “Añade aquí captura de la plataforma”.
+
+3) BANDA DE CONFIANZA (logos + claims)
+- Título pequeño: “Proyecto para entorno фарma / formación profesional”
+- Muestra logos (INS PIRA y Novo Nordisk) con un texto neutro:
+  “Logos mostrados con fines identificativos del proyecto.”
+- Añade 4–5 “sellos” (chips):
+  - “Enfoque clínico aplicado”
+  - “Basado en casos”
+  - “Simulación conversacional con IA”
+  - “Diseño modular”
+  - “Acceso centralizado a recursos”
+(NO inventar certificaciones oficiales.)
+
+4) METODOLOGÍA (qué incluye cada módulo)
+Tres cards con iconos:
+- “Unidad didáctica en formato vídeo”
+- “Caso clínico práctico basado en agentes de voz con IA”
+- “Documentos y enlaces de interés”
+Añade “Cómo funciona” (3 pasos):
+1) Accede / inicia sesión
+2) Completa el módulo
+3) Practica el caso IA + revisa recursos
+
+5) SECCIÓN “4 MÓDULOS” (muy visual)
+Diseña 4 cards (2x2 en desktop, stack en mobile) con título, subtítulo “Caso clínico IA” resaltado y bullets.
+
+MÓDULO 1: Aspectos de seguridad y efectos adversos oculares con biológicos
+- Caso clínico IA: Paciente en tratamiento con biológicos sin respuesta luego de un periodo de tiempo
+- Evolución de la DA
+- Definición estándar de respuesta
+- Anticuerpos neutralizantes
+
+MÓDULO 2: Prurito y comorbilidad psicológica/psiquiátrica
+- Caso clínico IA: Paciente poco adherente, con brotes frecuentes tras incumplimiento del tratamiento
+- Comunicación médico-paciente: empatía, escucha activa, valoración de preferencias y necesidades del paciente
+- Importancia de la valoración y promoción de la adherencia
+- Factores a considerar antes de realizar un cambio de tratamiento
+
+MÓDULO 3: Adolescente con dermatitis atópica en cabeza y cuello
+- Caso clínico IA: Paciente con DA grave y afectación de cara y cuello
+- Selección del tratamiento considerando necesidad urgente de control
+- Principales AE de los tratamientos biológicos y su manejo
+- Principales EA de los iJAK y su manejo
+
+MÓDULO 4: Paciente con comorbilidades orgánicas complejas
+- Caso clínico IA: 2 pacientes con DA, similar perfil clínico y 2 respuestas diferentes al tratamiento
+- Variación en la respuesta de un paciente a otro: ¿cómo evaluar la eficacia?
+- Comorbilidades
+- Interacciones con otros medicamentos
+
+6) SECCIÓN “ACCESO”
+Bloque destacado (background degradado azul/verde):
+- “¿Ya tienes acceso?”
+- Texto: “Inicia sesión para comenzar el módulo o continuar tu progreso.”
+- Botón grande: “Acceder a la plataforma” -> {{LOGIN_URL}}
+- Microcopy: “Acceso seguro. Plataforma externa.”
+
+7) FAQ (5 preguntas)
+- ¿Para quién está dirigido?
+- ¿Qué formato tiene el contenido?
+- ¿Necesito instalar algo?
+- ¿Qué es un caso con agentes de voz con IA?
+- ¿Cómo accedo al curso?
+
+8) FOOTER corporativo
+- Repite logo INS PIRA pequeño.
+- Links placeholder: Privacidad | Términos | Contacto
+- “© {{AÑO}} {{EMPRESA}}. Todos los derechos reservados.”
+- Nota legal neutral:
+  “Contenido formativo. No sustituye el criterio clínico ni constituye consejo médico.”
+
+DETALLES TÉCNICOS
+- Implementa scroll suave y navegación a anchors (#programa, #metodologia, etc.).
+- Botones con estados hover/focus.
+- Accesibilidad: contraste, tamaños, focus visible.
+- Deja comentarios en el HTML donde colocar:
+  - Captura real de la plataforma
+  - PDF/programa descargable si existe (opcional)
+
+OUTPUT (OBLIGATORIO)
+1) Estructura de archivos recomendada
+2) Código completo
+3) Instrucciones para correrlo en Replit
+4) Dónde cambiar:
+   - {{LOGIN_URL}}
+   - {{EMAIL_CONTACTO}}
+   - {{EMPRESA}}
+   - {{AÑO}}
+
+PLACEHOLDERS
+- {{LOGIN_URL}} = https://tudominio.com/login
+- {{EMPRESA}} = INSPIRA / (o el nombre del proyecto)
+- {{EMAIL_CONTACTO}} = contacto@tudominio.com
+- {{AÑO}} = 2026
