@@ -27,7 +27,8 @@ export default function Trust() {
             <img src={inspiraLogo} alt="Inspira Network" className="h-10 md:h-12 w-auto object-contain" />
           </div>
           <div className="hover:scale-105 transition-transform duration-300">
-            <img src={metamedicsLogo} alt="MetaMedicsVR" className="h-12 md:h-14 w-auto object-contain invert brightness-0" />
+            {/* Removed invert and brightness-0 to ensure logo is visible even on light background if it's not dark-optimized */}
+            <img src={metamedicsLogo} alt="MetaMedicsVR" className="h-12 md:h-14 w-auto object-contain" />
           </div>
         </div>
 
