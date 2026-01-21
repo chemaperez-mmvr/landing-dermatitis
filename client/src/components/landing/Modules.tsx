@@ -44,34 +44,34 @@ export default function Modules() {
   ];
 
   return (
-    <section id="modulos" className="py-20 bg-black/20">
+    <section id="modulos" className="py-20 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-16">
-          <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Programa Académico</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-white">4 Módulos de Especialización</h2>
+        <div className="mb-16 text-center md:text-left">
+          <span className="text-primary font-extrabold tracking-wider uppercase text-sm mb-2 block">Programa Académico</span>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">4 Módulos de Especialización</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {modules.map((mod, i) => (
-            <Card key={i} className="bg-card border-white/5 hover:border-primary/50 transition-all duration-300 group overflow-hidden">
-              <div className="h-1 w-full bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <CardHeader>
-                <CardTitle className="text-xl font-bold text-white leading-tight mb-2">
+            <Card key={i} className="bg-white border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden rounded-2xl">
+              <div className="h-1.5 w-full bg-primary/20 group-hover:bg-primary transition-colors" />
+              <CardHeader className="pb-4">
+                <CardTitle className="text-xl font-extrabold text-slate-900 leading-tight mb-2">
                   {mod.title}
                 </CardTitle>
-                <div className="flex items-start gap-2 p-3 rounded-lg bg-primary/10 border border-primary/20 mt-2">
+                <div className="flex items-start gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10 mt-2 group-hover:bg-primary/10 transition-colors">
                   <Mic className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs font-bold text-primary uppercase block mb-0.5">Caso Clínico IA</span>
-                    <span className="text-sm text-gray-200">{mod.aiCase}</span>
+                    <span className="text-xs font-black text-primary uppercase block mb-0.5">Caso Clínico IA</span>
+                    <span className="text-sm font-bold text-slate-700">{mod.aiCase}</span>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {mod.topics.map((topic, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground group-hover:text-gray-300 transition-colors">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                    <li key={j} className="flex items-start gap-3 text-sm font-semibold text-slate-600 group-hover:text-slate-900 transition-colors">
+                      <div className="w-2 h-2 rounded-full bg-accent mt-1.5 shrink-0" />
                       {topic}
                     </li>
                   ))}

@@ -1,5 +1,6 @@
-import inspiraLogo from "@assets/generated_images/minimalist_tech_logo_for_inspira.png";
-import novoLogo from "@assets/generated_images/corporate_pharmaceutical_logo_generic.png";
+import pfizerLogo from "@assets/logo-pfizer-scaled-675x675_1768981762492.jpg";
+import inspiraLogo from "@assets/logo-inspira_1768981762483.png";
+import metamedicsLogo from "@assets/metamedicsvr_logox_1768981762493.png";
 import { ShieldCheck, UserCheck, Mic, Layout, Database } from "lucide-react";
 
 export default function Trust() {
@@ -12,33 +13,25 @@ export default function Trust() {
   ];
 
   return (
-    <section className="py-12 border-y border-white/5 bg-white/2 backdrop-blur-sm">
+    <section className="py-16 border-y border-slate-100 bg-slate-50/50">
       <div className="container mx-auto px-4 text-center">
-        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-8">
-          Proyecto para entorno Farma / Formación Profesional
+        <p className="text-sm font-bold text-slate-800 uppercase tracking-widest mb-10">
+          Proyecto de Formación Médica con Simulaciones
         </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 mb-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
-          <div className="flex flex-col items-center gap-2">
-            <img src={inspiraLogo} alt="INS PIRA" className="h-10 w-auto object-contain brightness-0 invert" />
-          </div>
-          <div className="w-px h-10 bg-white/10 hidden md:block" />
-          <div className="flex flex-col items-center gap-2">
-            <img src={novoLogo} alt="Novo Nordisk" className="h-10 w-auto object-contain brightness-0 invert" />
-          </div>
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 mb-12">
+          <img src={pfizerLogo} alt="Pfizer" className="h-12 md:h-14 w-auto object-contain transition-all grayscale hover:grayscale-0" />
+          <img src={inspiraLogo} alt="Inspira Network" className="h-10 md:h-12 w-auto object-contain transition-all grayscale hover:grayscale-0" />
+          <img src={metamedicsLogo} alt="MetaMedicsVR" className="h-10 md:h-12 w-auto object-contain transition-all grayscale hover:grayscale-0 invert brightness-0" />
         </div>
-
-        <p className="text-xs text-muted-foreground/50 mb-10 max-w-lg mx-auto">
-          Logos mostrados con fines identificativos del proyecto.
-        </p>
 
         <div className="flex flex-wrap justify-center gap-3">
           {chips.map((chip, i) => (
             <div 
               key={i} 
-              className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm text-gray-300 hover:bg-white/10 hover:border-primary/30 transition-colors"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:border-primary/30 transition-all hover:shadow-md"
             >
-              <chip.icon size={16} className="text-accent" />
+              <chip.icon size={16} className="text-primary" />
               <span>{chip.text}</span>
             </div>
           ))}
