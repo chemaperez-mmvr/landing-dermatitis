@@ -8,11 +8,15 @@
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   
-  /* Medical Light Palette */
-  --color-background: hsl(210 40% 98%); 
+  /* Medical Innovation Palette */
+  --color-background: hsl(0 0% 100%); 
   --color-foreground: hsl(222 47% 11%);
 
-  /* Card: Pure White */
+  /* Base Colors from User */
+  --color-primary: #7995C4; /* Soft Steel Blue */
+  --color-accent: #5DB390;  /* Medical Mint Green */
+  
+  /* Card: Pure White with subtle depth */
   --color-card: hsl(0 0% 100%);
   --color-card-foreground: hsl(222 47% 11%);
 
@@ -20,17 +24,9 @@
   --color-popover: hsl(0 0% 100%);
   --color-popover-foreground: hsl(222 47% 11%);
 
-  /* Primary: Pfizer Blue */
-  --color-primary: #009EFF;
-  --color-primary-foreground: hsl(0 0% 100%);
-
-  /* Secondary: Soft Grey */
+  /* Secondary: Neutral Soft Grey */
   --color-secondary: hsl(210 40% 96.1%);
   --color-secondary-foreground: hsl(222 47% 11.2%);
-
-  /* Accent: Professional Teal/Green */
-  --color-accent: hsl(172 66% 50%);
-  --color-accent-foreground: hsl(222 47% 11%);
 
   /* Muted */
   --color-muted: hsl(210 40% 96.1%);
@@ -39,28 +35,38 @@
   /* Borders */
   --color-border: hsl(214.3 31.8% 91.4%);
   --color-input: hsl(214.3 31.8% 91.4%);
-  --color-ring: #009EFF;
+  --color-ring: #7995C4;
 
   /* Fonts */
   --font-sans: 'Manrope', sans-serif;
   --font-display: 'Sora', sans-serif;
 }
 
-/* Custom Utilities */
+/* Custom Utilities for Innovation Style */
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(121, 149, 196, 0.1);
   }
 
   .text-glow {
-    text-shadow: 0 0 20px rgba(0, 158, 255, 0.2);
+    text-shadow: 0 0 15px rgba(121, 149, 196, 0.3);
   }
   
   .glow-box {
-    box-shadow: 0 10px 40px -10px rgba(0, 158, 255, 0.1);
+    box-shadow: 0 20px 40px -15px rgba(121, 149, 196, 0.15);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #7995C4 0%, #5DB390 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #7995C4 0%, #5DB390 100%);
   }
 }
 

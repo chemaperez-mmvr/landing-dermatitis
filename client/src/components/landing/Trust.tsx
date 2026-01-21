@@ -13,25 +13,31 @@ export default function Trust() {
   ];
 
   return (
-    <section className="py-16 border-y border-slate-100 bg-slate-50/50">
+    <section className="py-20 border-y border-slate-50 bg-slate-50/30">
       <div className="container mx-auto px-4 text-center">
-        <p className="text-sm font-bold text-slate-800 uppercase tracking-widest mb-10">
+        <p className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] mb-12">
           Proyecto de Formación Médica con Simulaciones
         </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 mb-12">
-          <img src={pfizerLogo} alt="Pfizer" className="h-12 md:h-14 w-auto object-contain transition-all grayscale hover:grayscale-0" />
-          <img src={inspiraLogo} alt="Inspira Network" className="h-10 md:h-12 w-auto object-contain transition-all grayscale hover:grayscale-0" />
-          <img src={metamedicsLogo} alt="MetaMedicsVR" className="h-10 md:h-12 w-auto object-contain transition-all grayscale hover:grayscale-0 invert brightness-0" />
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 mb-16 grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="hover:scale-105 transition-transform duration-300">
+            <img src={pfizerLogo} alt="Pfizer" className="h-14 md:h-16 w-auto object-contain" />
+          </div>
+          <div className="hover:scale-105 transition-transform duration-300">
+            <img src={inspiraLogo} alt="Inspira Network" className="h-10 md:h-12 w-auto object-contain" />
+          </div>
+          <div className="hover:scale-105 transition-transform duration-300">
+            <img src={metamedicsLogo} alt="MetaMedicsVR" className="h-12 md:h-14 w-auto object-contain invert brightness-0" />
+          </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-4">
           {chips.map((chip, i) => (
             <div 
               key={i} 
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:border-primary/30 transition-all hover:shadow-md"
+              className="flex items-center gap-3 px-6 py-3 rounded-2xl border border-white bg-white/80 shadow-sm text-sm font-bold text-slate-600 hover:border-primary/40 hover:text-primary transition-all hover:shadow-md"
             >
-              <chip.icon size={16} className="text-primary" />
+              <chip.icon size={18} className="text-accent" />
               <span>{chip.text}</span>
             </div>
           ))}

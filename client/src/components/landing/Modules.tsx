@@ -44,34 +44,38 @@ export default function Modules() {
   ];
 
   return (
-    <section id="modulos" className="py-20 bg-slate-50">
+    <section id="modulos" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-16 text-center md:text-left">
-          <span className="text-primary font-extrabold tracking-wider uppercase text-sm mb-2 block">Programa Académico</span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900">4 Módulos de Especialización</h2>
+        <div className="mb-20 text-center">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 text-primary font-black tracking-widest uppercase text-[10px] mb-4 border border-slate-100 shadow-sm">
+            Programa Académico
+          </span>
+          <h2 className="text-3xl md:text-4xl font-display font-extrabold text-slate-900">4 Módulos de Especialización</h2>
+          <div className="w-20 h-1.5 gradient-bg mx-auto mt-6 rounded-full opacity-30" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-10">
           {modules.map((mod, i) => (
-            <Card key={i} className="bg-white border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden rounded-2xl">
-              <div className="h-1.5 w-full bg-primary/20 group-hover:bg-primary transition-colors" />
+            <Card key={i} className="bg-white border-slate-50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group overflow-hidden rounded-[2rem] p-4">
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl font-extrabold text-slate-900 leading-tight mb-2">
+                <CardTitle className="text-2xl font-black text-slate-900 leading-tight mb-4">
                   {mod.title}
                 </CardTitle>
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10 mt-2 group-hover:bg-primary/10 transition-colors">
-                  <Mic className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <div className="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 group-hover:bg-white group-hover:border-primary/20 transition-all duration-500">
+                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center text-white shrink-0 shadow-lg shadow-primary/10">
+                    <Mic size={24} />
+                  </div>
                   <div>
-                    <span className="text-xs font-black text-primary uppercase block mb-0.5">Caso Clínico IA</span>
-                    <span className="text-sm font-bold text-slate-700">{mod.aiCase}</span>
+                    <span className="text-[10px] font-black text-primary uppercase block mb-1 tracking-widest">Caso Clínico IA</span>
+                    <span className="text-base font-bold text-slate-700">{mod.aiCase}</span>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3">
+                <ul className="space-y-4 pt-4">
                   {mod.topics.map((topic, j) => (
-                    <li key={j} className="flex items-start gap-3 text-sm font-semibold text-slate-600 group-hover:text-slate-900 transition-colors">
-                      <div className="w-2 h-2 rounded-full bg-accent mt-1.5 shrink-0" />
+                    <li key={j} className="flex items-center gap-4 text-sm font-bold text-slate-500 group-hover:text-slate-700 transition-colors">
+                      <div className="w-2.5 h-2.5 rounded-full bg-accent opacity-40 group-hover:opacity-100 transition-opacity" />
                       {topic}
                     </li>
                   ))}

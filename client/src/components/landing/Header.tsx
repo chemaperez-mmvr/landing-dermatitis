@@ -25,34 +25,32 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-slate-200 py-3 shadow-sm"
-          : "bg-transparent py-5"
+          ? "bg-white/70 backdrop-blur-xl border-b border-slate-100 py-3 shadow-sm"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Generic Logo DIGI0671 */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg">D</div>
-            <span className="text-xl font-display font-bold tracking-tight text-slate-900">DIGI<span className="text-primary">0671</span></span>
-          </div>
+        <a href="#" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">D</div>
+          <span className="text-2xl font-display font-black tracking-tighter text-slate-900">DIGI<span className="text-primary">0671</span></span>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+              className="text-sm font-bold text-slate-500 hover:text-primary transition-colors tracking-wide"
             >
               {link.name}
             </a>
           ))}
           <Button 
-            className="bg-primary hover:bg-primary/90 text-white font-bold rounded-full px-6 shadow-md shadow-primary/20"
+            className="gradient-bg border-0 hover:opacity-90 text-white font-black rounded-xl px-8 h-11 shadow-lg shadow-primary/20 transition-all hover:scale-105"
             asChild
           >
             <a href="https://tudominio.com/login">Acceder</a>
@@ -61,27 +59,27 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-slate-900"
+          className="md:hidden text-slate-900 p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          {mobileMenuOpen ? <X /> : <Menu />}
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-b border-slate-200 p-4 md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5 shadow-xl">
+        <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-2xl border-b border-slate-100 p-6 md:hidden flex flex-col gap-5 animate-in slide-in-from-top-5 shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-base font-semibold text-slate-600 hover:text-primary py-2 block border-b border-slate-100"
+              className="text-lg font-bold text-slate-700 hover:text-primary py-3 block border-b border-slate-50"
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <Button className="w-full bg-primary" asChild>
+          <Button className="w-full gradient-bg h-14 text-lg font-bold rounded-xl" asChild>
             <a href="https://tudominio.com/login">Acceder</a>
           </Button>
         </div>
