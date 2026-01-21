@@ -1,6 +1,6 @@
 import pfizerLogo from "@assets/logo-pfizer-scaled-675x675_1768981762492.jpg";
 import inspiraLogo from "@assets/logo-inspira_1768981762483.png";
-import metamedicsLogo from "@assets/metamedicsvr_logox_1768981762493.png";
+import metamedicsLogo from "@assets/metamedicsvr_logox_1768982602883.png";
 import { ShieldCheck, UserCheck, Mic, Layout, Database } from "lucide-react";
 
 export default function Trust() {

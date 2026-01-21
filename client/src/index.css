@@ -65,8 +65,12 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .gradient-bg {
-    background: linear-gradient(135deg, #7995C4 0%, #5DB390 100%);
+  .solid-primary-bg {
+    background-color: #7995C4;
+  }
+  
+  .solid-primary-text {
+    color: #7995C4;
   }
 }
 

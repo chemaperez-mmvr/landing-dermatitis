@@ -45,7 +45,7 @@ export default function Hero() {
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <Button size="lg" className="gradient-bg border-0 hover:opacity-90 text-white rounded-xl text-base px-10 h-14 shadow-xl shadow-primary/20 font-bold transition-all hover:scale-[1.02]" asChild>
+              <Button size="lg" className="bg-[#7995C4] border-0 hover:opacity-90 text-white rounded-xl text-base px-10 h-14 shadow-xl shadow-primary/20 font-bold transition-all hover:scale-[1.02]" asChild>
                 <a href="https://tudominio.com/login">Acceder a la plataforma</a>
               </Button>
               <Button variant="outline" size="lg" className="rounded-xl text-base h-14 border-slate-200 text-slate-700 hover:bg-slate-50 font-bold px-10 transition-all" asChild>

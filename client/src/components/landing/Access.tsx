@@ -5,8 +5,8 @@ export default function Access() {
     <section id="acceso" className="py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="relative rounded-[3rem] overflow-hidden p-10 md:p-24 text-center">
-          {/* Innovation Gradient Background */}
-          <div className="absolute inset-0 gradient-bg z-0 shadow-2xl" />
+          {/* Innovation Background */}
+          <div className="absolute inset-0 bg-[#7995C4] z-0 shadow-2xl" />
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-0" />
           
           {/* Abstract Shapes for Innovation feel */}

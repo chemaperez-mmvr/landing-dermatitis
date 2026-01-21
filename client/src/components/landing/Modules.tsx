@@ -51,7 +51,7 @@ export default function Modules() {
             Programa Académico
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-extrabold text-slate-900">4 Módulos de Especialización</h2>
-          <div className="w-20 h-1.5 gradient-bg mx-auto mt-6 rounded-full opacity-30" />
+          <div className="w-20 h-1.5 bg-[#7995C4] mx-auto mt-6 rounded-full opacity-30" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-10">
@@ -62,7 +62,7 @@ export default function Modules() {
                   {mod.title}
                 </CardTitle>
                 <div className="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 group-hover:bg-white group-hover:border-primary/20 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center text-white shrink-0 shadow-lg shadow-primary/10">
+                  <div className="w-12 h-12 rounded-xl bg-[#7995C4] flex items-center justify-center text-white shrink-0 shadow-lg shadow-primary/10">
                     <Mic size={24} />
                   </div>
                   <div>

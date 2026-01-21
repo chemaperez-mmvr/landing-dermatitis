@@ -34,7 +34,7 @@ export default function Header() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Generic Logo DIGI0671 */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">D</div>
+          <div className="w-10 h-10 rounded-xl bg-[#7995C4] flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/20 transition-transform group-hover:scale-110">D</div>
           <span className="text-2xl font-display font-black tracking-tighter text-slate-900">DIGI<span className="text-primary">0671</span></span>
         </a>
 
@@ -50,7 +50,7 @@ export default function Header() {
             </a>
           ))}
           <Button 
-            className="gradient-bg border-0 hover:opacity-90 text-white font-black rounded-xl px-8 h-11 shadow-lg shadow-primary/20 transition-all hover:scale-105"
+            className="bg-[#7995C4] border-0 hover:opacity-90 text-white font-black rounded-xl px-8 h-11 shadow-lg shadow-primary/20 transition-all hover:scale-105"
             asChild
           >
             <a href="https://tudominio.com/login">Acceder</a>
@@ -79,7 +79,7 @@ export default function Header() {
               {link.name}
             </a>
           ))}
-          <Button className="w-full gradient-bg h-14 text-lg font-bold rounded-xl" asChild>
+          <Button className="w-full bg-[#7995C4] h-14 text-lg font-bold rounded-xl" asChild>
             <a href="https://tudominio.com/login">Acceder</a>
           </Button>
         </div>
