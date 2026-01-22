@@ -8,51 +8,48 @@
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   
-  /* DA Expert Cases Palette - EXACT from PDF */
-  --color-background: #0A0F1D; /* Dark Navy/Black from PDF */
-  --color-foreground: #FFFFFF;
+  /* DA Expert Cases Palette - EXACT from PDF colors provided */
+  --color-background: #FCFBFB; 
+  --color-foreground: #294795;
 
-  --color-primary: #1E50A0; /* Corporate Blue */
-  --color-accent: #A5C400;  /* Lime Green Accent */
+  --color-primary: #294795; /* Deep Blue */
+  --color-secondary: #5FABD1; /* Light Blue */
+  --color-accent: #C3DC65;  /* Lime Green */
   
-  --color-card: rgba(30, 41, 59, 0.4);
-  --color-card-foreground: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-card-foreground: #294795;
 
-  --color-muted: #1E293B;
-  --color-muted-foreground: #94A3B8;
+  --color-muted: #F1F5F9;
+  --color-muted-foreground: #64748B;
 
-  --color-border: rgba(255, 255, 255, 0.1);
-  --color-ring: #1E50A0;
-
+  --color-border: #E2E8F0;
   --font-sans: 'Manrope', sans-serif;
   --font-display: 'Sora', sans-serif;
 }
 
 @layer utilities {
   .glass {
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .gradient-text {
-    background: linear-gradient(135deg, #FFFFFF 0%, #A5C400 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .pdf-curve {
+    clip-path: ellipse(150% 100% at 50% 0%);
   }
 
-  .pdf-gradient {
-    background: radial-gradient(circle at top right, rgba(30, 80, 160, 0.3), transparent 70%),
-                radial-gradient(circle at bottom left, rgba(165, 196, 0, 0.1), transparent 70%);
+  .accent-line {
+    height: 4px;
+    background: linear-gradient(90deg, #294795 0%, #C3DC65 100%);
+    border-radius: 2px;
   }
 }
 
 @layer base {
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    background-image: radial-gradient(circle at 50% 0%, rgba(30, 80, 160, 0.15) 0%, transparent 50%);
   }
   h1, h2, h3, h4 {
-    @apply font-display tracking-tight;
+    @apply font-display tracking-tight text-primary;
   }
 }

@@ -13,22 +13,22 @@ export default function Team() {
   ];
 
   return (
-    <section id="equipo" className="py-24 bg-slate-900/30">
+    <section id="equipo" className="py-24 bg-[#FCFBFB]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-20 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tighter">Equipo Docente</h2>
-          <div className="h-1 w-20 bg-accent mx-auto" />
+          <h2 className="text-4xl md:text-5xl font-display font-black text-primary uppercase">Equipo Docente</h2>
+          <div className="accent-line w-20 mx-auto" />
         </div>
         
-        <div className="max-w-5xl mx-auto mb-24 p-8 md:p-12 glass rounded-none flex flex-col md:flex-row items-center gap-12 border-l-4 border-l-accent relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
-          <img src={pabloImg} alt="Dr. Pablo de la Cueva" className="w-56 h-56 rounded-none object-cover grayscale brightness-110 border-4 border-white/5 shadow-2xl" />
+        <div className="max-w-5xl mx-auto mb-24 p-12 bg-white rounded-[3rem] shadow-xl border border-slate-100 flex flex-col md:flex-row items-center gap-12 relative">
+          <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#C3DC65]/20 rounded-full blur-2xl -z-10" />
+          <img src={pabloImg} alt="Dr. Pablo de la Cueva" className="w-64 h-64 rounded-3xl object-cover border-4 border-white shadow-lg" />
           <div className="space-y-6">
             <div>
-              <span className="text-accent font-black uppercase tracking-[0.3em] text-xs mb-2 block">Director Científico</span>
-              <h3 className="text-4xl font-black text-white leading-tight">Dr. Pablo de la Cueva</h3>
+              <span className="text-[#5FABD1] font-black uppercase tracking-widest text-xs mb-2 block">Director Científico</span>
+              <h3 className="text-4xl font-black text-primary leading-tight">Dr. Pablo de la Cueva</h3>
             </div>
-            <p className="text-lg text-slate-300 font-medium leading-relaxed">
+            <p className="text-lg text-slate-600 font-medium leading-relaxed">
               Jefe de Servicio de Dermatología, Hospital Infanta Leonor de Madrid. Vicepresidente de la AEDV. Presidente SCAEDV. Profesor Medicina Universidad Complutense de Madrid.
             </p>
           </div>
@@ -38,12 +38,12 @@ export default function Team() {
           {authors.map((author, i) => (
             <div key={i} className="group text-center space-y-6">
               <div className="relative inline-block">
-                <img src={author.img} alt={author.name} className="w-36 h-36 rounded-none mx-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700 border border-white/10" />
-                <div className="absolute inset-0 border border-accent/0 group-hover:border-accent/50 group-hover:scale-110 transition-all duration-500 pointer-events-none" />
+                <img src={author.img} alt={author.name} className="w-40 h-40 rounded-[2rem] mx-auto object-cover border-4 border-white shadow-md transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 border-2 border-[#C3DC65]/0 group-hover:border-[#C3DC65]/50 rounded-[2rem] transition-all" />
               </div>
               <div className="space-y-2">
-                <h4 className="text-lg font-bold text-white group-hover:text-accent transition-colors">{author.name}</h4>
-                <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest leading-relaxed px-4 group-hover:text-slate-400 transition-colors">
+                <h4 className="text-lg font-bold text-primary group-hover:text-[#5FABD1] transition-colors">{author.name}</h4>
+                <p className="text-xs text-slate-500 font-medium leading-relaxed px-4">
                   {author.desc}
                 </p>
               </div>
