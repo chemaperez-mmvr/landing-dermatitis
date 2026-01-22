@@ -1,87 +1,58 @@
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mic, Check } from "lucide-react";
+import { Mic, Video, FileDown, ArrowRight } from "lucide-react";
 
 export default function Modules() {
   const modules = [
-    {
-      title: "Módulo 1: Seguridad y efectos adversos oculares",
-      aiCase: "Paciente sin respuesta a biológicos",
-      topics: [
-        "Evolución de la DA",
-        "Definición estándar de respuesta",
-        "Anticuerpos neutralizantes"
-      ]
-    },
-    {
-      title: "Módulo 2: Prurito y comorbilidad psicológica",
-      aiCase: "Paciente poco adherente con brotes",
-      topics: [
-        "Comunicación médico-paciente",
-        "Valoración de preferencias",
-        "Promoción de la adherencia",
-        "Cambio de tratamiento"
-      ]
-    },
-    {
-      title: "Módulo 3: Adolescente con DA en cabeza y cuello",
-      aiCase: "DA grave con afectación facial",
-      topics: [
-        "Selección de tratamiento urgente",
-        "AE de tratamientos biológicos",
-        "EA de iJAK y manejo"
-      ]
-    },
-    {
-      title: "Módulo 4: Comorbilidades orgánicas complejas",
-      aiCase: "Dos pacientes, perfiles similares, respuestas distintas",
-      topics: [
-        "Variación en la respuesta",
-        "Evaluación de la eficacia",
-        "Comorbilidades e interacciones"
-      ]
-    }
+    { id: 1, title: "Aspectos de seguridad y efectos adversos oculares con biológicos", case: "Paciente en tratamiento con biológicos sin respuesta" },
+    { id: 2, title: "Prurito y comorbilidad psicológica/psiquiátrica", case: "Paciente poco adherente con brotes frecuentes" },
+    { id: 3, title: "Adolescente con dermatitis atópica en cabeza y cuello", case: "Paciente con DA grave y afectación facial" },
+    { id: 4, title: "Paciente con comorbilidades orgánicas complejas", case: "Diferentes respuestas terapéuticas en perfiles similares" }
   ];
 
   return (
-    <section id="modulos" className="py-24 bg-white">
+    <section id="programa" className="py-24 bg-slate-50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-20 text-center">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-slate-50 text-primary font-black tracking-widest uppercase text-[10px] mb-4 border border-slate-100 shadow-sm">
-            Programa Académico
-          </span>
-          <h2 className="text-3xl md:text-4xl font-display font-extrabold text-slate-900">4 Módulos de Especialización</h2>
-          <div className="w-20 h-1.5 bg-[#7995C4] mx-auto mt-6 rounded-full opacity-30" />
+        <div className="max-w-3xl mb-16">
+          <h2 className="text-4xl font-display font-extrabold text-slate-900 mb-6">4 Módulos Especializados</h2>
+          <p className="text-lg text-slate-600 font-medium">Una formación profunda que responde a las necesidades reales del dermatólogo en la práctica clínica.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {modules.map((mod, i) => (
-            <Card key={i} className="bg-white border-slate-50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group overflow-hidden rounded-[2rem] p-4">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-2xl font-black text-slate-900 leading-tight mb-4">
-                  {mod.title}
-                </CardTitle>
-                <div className="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 group-hover:bg-white group-hover:border-primary/20 transition-all duration-500">
-                  <div className="w-12 h-12 rounded-xl bg-[#7995C4] flex items-center justify-center text-white shrink-0 shadow-lg shadow-primary/10">
-                    <Mic size={24} />
+        <div className="grid gap-8">
+          {modules.map((mod) => (
+            <div key={mod.id} className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col lg:flex-row gap-10 hover:shadow-xl transition-all duration-500">
+              <div className="lg:w-1/3">
+                <div className="text-sm font-black text-primary uppercase tracking-widest mb-2">Módulo {mod.id}</div>
+                <h3 className="text-2xl font-bold text-slate-900 leading-tight mb-4">{mod.title}</h3>
+                <div className="flex flex-wrap gap-4 mt-6">
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1.5 rounded-full">
+                    <Video size={14} className="text-primary" /> Vídeo formativo
                   </div>
-                  <div>
-                    <span className="text-[10px] font-black text-primary uppercase block mb-1 tracking-widest">Caso Clínico IA</span>
-                    <span className="text-base font-bold text-slate-700">{mod.aiCase}</span>
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1.5 rounded-full">
+                    <FileDown size={14} className="text-primary" /> Descargables
                   </div>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-4 pt-4">
-                  {mod.topics.map((topic, j) => (
-                    <li key={j} className="flex items-center gap-4 text-sm font-bold text-slate-500 group-hover:text-slate-700 transition-colors">
-                      <div className="w-2.5 h-2.5 rounded-full bg-accent opacity-40 group-hover:opacity-100 transition-opacity" />
-                      {topic}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+              </div>
+              
+              <div className="lg:w-2/3 bg-slate-900 rounded-2xl p-8 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#A5C400]/20 rounded-full blur-3xl -z-0" />
+                <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                  <div>
+                    <div className="flex items-center gap-2 text-[#A5C400] text-xs font-black uppercase tracking-widest mb-2">
+                      <Mic size={16} /> Caso Clínico Interactivo IA
+                    </div>
+                    <h4 className="text-white text-xl font-bold mb-2">{mod.case}</h4>
+                    <p className="text-slate-400 text-xs font-medium italic">
+                      "Interactúa con el paciente virtual y toma decisiones clínicas en tiempo real."
+                    </p>
+                  </div>
+                  <button className="bg-[#A5C400] hover:bg-[#A5C400]/90 text-slate-900 font-black px-6 py-3 rounded-xl text-sm transition-all whitespace-nowrap">
+                    Comenzar Simulación
+                  </button>
+                </div>
+                <p className="text-[10px] text-slate-500 mt-6 font-medium border-t border-white/10 pt-4">
+                  Este caso clínico es interactivo y basado en Inteligencia Artificial. El avatar te hará preguntas mediante voz para simular una consulta real.
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </div>

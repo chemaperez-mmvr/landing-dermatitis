@@ -8,80 +8,51 @@
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   
-  /* Medical Innovation Palette */
-  --color-background: hsl(0 0% 100%); 
-  --color-foreground: hsl(222 47% 11%);
+  /* DA Expert Cases Palette - Inspired by Diptico */
+  --color-background: #FFFFFF; 
+  --color-foreground: #333333;
 
-  /* Base Colors from User */
-  --color-primary: #7995C4; /* Soft Steel Blue */
-  --color-accent: #5DB390;  /* Medical Mint Green */
+  /* Primary Blue from Logo/Diptico */
+  --color-primary: #1E50A0; 
+  /* Secondary Green from Logo/Diptico */
+  --color-accent: #A5C400;  
   
-  /* Card: Pure White with subtle depth */
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(222 47% 11%);
+  --color-card: #FFFFFF;
+  --color-card-foreground: #333333;
 
-  /* Popover */
-  --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(222 47% 11%);
+  --color-muted: #F8FAFC;
+  --color-muted-foreground: #64748B;
 
-  /* Secondary: Neutral Soft Grey */
-  --color-secondary: hsl(210 40% 96.1%);
-  --color-secondary-foreground: hsl(222 47% 11.2%);
+  --color-border: #E2E8F0;
+  --color-ring: #1E50A0;
 
-  /* Muted */
-  --color-muted: hsl(210 40% 96.1%);
-  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
-
-  /* Borders */
-  --color-border: hsl(214.3 31.8% 91.4%);
-  --color-input: hsl(214.3 31.8% 91.4%);
-  --color-ring: #7995C4;
-
-  /* Fonts */
   --font-sans: 'Manrope', sans-serif;
   --font-display: 'Sora', sans-serif;
 }
 
-/* Custom Utilities for Innovation Style */
 @layer utilities {
   .glass {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(121, 149, 196, 0.1);
-  }
-
-  .text-glow {
-    text-shadow: 0 0 15px rgba(121, 149, 196, 0.3);
-  }
-  
-  .glow-box {
-    box-shadow: 0 20px 40px -15px rgba(121, 149, 196, 0.15);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #7995C4 0%, #5DB390 100%);
+    background: linear-gradient(135deg, #1E50A0 0%, #A5C400 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .solid-primary-bg {
-    background-color: #7995C4;
-  }
-  
-  .solid-primary-text {
-    color: #7995C4;
+  .gradient-bg {
+    background: linear-gradient(135deg, #1E50A0 0%, #A5C400 100%);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
-    @apply font-sans antialiased bg-background text-foreground selection:bg-primary/20 selection:text-primary;
+    @apply font-sans antialiased bg-background text-foreground;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4 {
     @apply font-display tracking-tight text-slate-900;
   }
 }
