@@ -3,6 +3,7 @@ import Hero from "@/components/landing/Hero";
 import WhyAndDynamics from "@/components/landing/WhyAndDynamics";
 import Modules from "@/components/landing/Modules";
 import Team from "@/components/landing/Team";
+import Access from "@/components/landing/Access";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/landing/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <WhyAndDynamics />
         <Modules />
         <Team />
+        <Access />
         <FAQ />
       </main>
       <Footer />
