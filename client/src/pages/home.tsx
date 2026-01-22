@@ -1,22 +1,20 @@
 import Header from "@/components/landing/Header";
 import Hero from "@/components/landing/Hero";
-import Trust from "@/components/landing/Trust";
-import Team from "@/components/landing/Team";
+import WhyAndDynamics from "@/components/landing/WhyAndDynamics";
 import Modules from "@/components/landing/Modules";
-import Access from "@/components/landing/Access";
+import Team from "@/components/landing/Team";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/landing/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-foreground selection:bg-primary/20">
+    <div className="min-h-screen bg-background text-foreground selection:bg-accent/30 selection:text-accent">
       <Header />
       <main>
         <Hero />
-        <Trust />
+        <WhyAndDynamics />
         <Modules />
         <Team />
-        <Access />
         <FAQ />
       </main>
       <Footer />

@@ -1,59 +1,110 @@
-import { Mic, Video, FileDown, ArrowRight } from "lucide-react";
+import { Video, FileDown, Mic, CheckCircle2 } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Modules() {
   const modules = [
-    { id: 1, title: "Aspectos de seguridad y efectos adversos oculares con biológicos", case: "Paciente en tratamiento con biológicos sin respuesta" },
-    { id: 2, title: "Prurito y comorbilidad psicológica/psiquiátrica", case: "Paciente poco adherente con brotes frecuentes" },
-    { id: 3, title: "Adolescente con dermatitis atópica en cabeza y cuello", case: "Paciente con DA grave y afectación facial" },
-    { id: 4, title: "Paciente con comorbilidades orgánicas complejas", case: "Diferentes respuestas terapéuticas en perfiles similares" }
+    {
+      id: 1,
+      title: "Aspectos de seguridad y efectos adversos oculares con biológicos",
+      bullets: [
+        "Caso clínico IA: Paciente en tratamiento con biológicos sin respuesta luego de un periodo de tiempo",
+        "Evolución de la DA",
+        "Definición estándar de respuesta",
+        "Anticuerpos neutralizantes"
+      ]
+    },
+    {
+      id: 2,
+      title: "Prurito y comorbilidad psicológica/psiquiátrica",
+      bullets: [
+        "Caso clínico IA: Paciente poco adherente, con brotes frecuentes tras incumplimiento del tratamiento",
+        "Comunicación medico paciente: Empatía, escucha activa, valoración de las preferencias y necesidades del paciente",
+        "Importancia de la valoración y promoción de la adherencia",
+        "Factores que considerar antes de realizar un cambio de tratamiento"
+      ]
+    },
+    {
+      id: 3,
+      title: "Adolescente con dermatitis atópica en cabeza y cuello",
+      bullets: [
+        "Caso clínico IA: Paciente con da grave y afectación de cara y cuello",
+        "Selección del tratamiento considerando necesidad urgente de control",
+        "Principales AE de los tratamientos biológicos y su manejo",
+        "Principales EA de los IJAK y su manejo"
+      ]
+    },
+    {
+      id: 4,
+      title: "Paciente con comorbilidades orgánicas complejas",
+      bullets: [
+        "Caso clínico IA: 2 pacientes con DA, similar perfil clínico y 2 repuestas diferente al tratamiento",
+        "Variación en la respuesta de un paciente a otro ¿Cómo evaluar la eficacia?",
+        "Comorbilidades",
+        "Interacciones con otros medicamentos"
+      ]
+    }
   ];
 
   return (
-    <section id="programa" className="py-24 bg-slate-50">
+    <section id="modulos" className="py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl font-display font-extrabold text-slate-900 mb-6">4 Módulos Especializados</h2>
-          <p className="text-lg text-slate-600 font-medium">Una formación profunda que responde a las necesidades reales del dermatólogo en la práctica clínica.</p>
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tighter">Programa Académico</h2>
+          <p className="text-slate-400 font-bold uppercase tracking-widest text-sm">4 Módulos de Alto Impacto</p>
         </div>
 
-        <div className="grid gap-8">
+        <div className="grid lg:grid-cols-2 gap-8 mb-20">
           {modules.map((mod) => (
-            <div key={mod.id} className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col lg:flex-row gap-10 hover:shadow-xl transition-all duration-500">
-              <div className="lg:w-1/3">
-                <div className="text-sm font-black text-primary uppercase tracking-widest mb-2">Módulo {mod.id}</div>
-                <h3 className="text-2xl font-bold text-slate-900 leading-tight mb-4">{mod.title}</h3>
-                <div className="flex flex-wrap gap-4 mt-6">
-                  <div className="flex items-center gap-2 text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1.5 rounded-full">
-                    <Video size={14} className="text-primary" /> Vídeo formativo
+            <Card key={mod.id} className="bg-slate-900/40 border-white/5 hover:border-accent/30 transition-all duration-500 group overflow-hidden flex flex-col h-full rounded-none">
+              <div className="h-1 w-full bg-primary/20 group-hover:bg-accent transition-colors" />
+              <CardContent className="p-8 space-y-6 flex-grow">
+                <div className="flex items-center justify-between">
+                  <span className="text-accent font-black text-xs uppercase tracking-[0.3em]">Módulo {mod.id}</span>
+                  <div className="h-px flex-grow mx-4 bg-white/5" />
+                </div>
+                <h3 className="text-2xl font-bold text-white leading-snug group-hover:text-accent transition-colors">
+                  {mod.title}
+                </h3>
+                <ul className="space-y-4">
+                  {mod.bullets.map((bullet, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm text-slate-400 group-hover:text-slate-300">
+                      <CheckCircle2 size={16} className="text-accent mt-0.5 shrink-0" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+              <div className="p-8 bg-white/2 border-t border-white/5">
+                <p className="text-[10px] font-black uppercase text-slate-500 mb-4 tracking-widest">En cada módulo encontrarás:</p>
+                <div className="grid grid-cols-3 gap-2">
+                  <div className="flex flex-col items-center gap-2 text-center">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"><Video size={18} /></div>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase">Vídeo</span>
                   </div>
-                  <div className="flex items-center gap-2 text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1.5 rounded-full">
-                    <FileDown size={14} className="text-primary" /> Descargables
+                  <div className="flex flex-col items-center gap-2 text-center">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"><FileDown size={18} /></div>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase">Documentos</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 text-center">
+                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent ring-2 ring-accent/20"><Mic size={18} /></div>
+                    <span className="text-[9px] font-bold text-accent uppercase">IA Case</span>
                   </div>
                 </div>
               </div>
-              
-              <div className="lg:w-2/3 bg-slate-900 rounded-2xl p-8 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#A5C400]/20 rounded-full blur-3xl -z-0" />
-                <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                  <div>
-                    <div className="flex items-center gap-2 text-[#A5C400] text-xs font-black uppercase tracking-widest mb-2">
-                      <Mic size={16} /> Caso Clínico Interactivo IA
-                    </div>
-                    <h4 className="text-white text-xl font-bold mb-2">{mod.case}</h4>
-                    <p className="text-slate-400 text-xs font-medium italic">
-                      "Interactúa con el paciente virtual y toma decisiones clínicas en tiempo real."
-                    </p>
-                  </div>
-                  <button className="bg-[#A5C400] hover:bg-[#A5C400]/90 text-slate-900 font-black px-6 py-3 rounded-xl text-sm transition-all whitespace-nowrap">
-                    Comenzar Simulación
-                  </button>
-                </div>
-                <p className="text-[10px] text-slate-500 mt-6 font-medium border-t border-white/10 pt-4">
-                  Este caso clínico es interactivo y basado en Inteligencia Artificial. El avatar te hará preguntas mediante voz para simular una consulta real.
-                </p>
-              </div>
-            </div>
+            </Card>
           ))}
+        </div>
+
+        <div className="max-w-3xl mx-auto p-8 rounded-xl bg-slate-900/80 border border-white/5 text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest">
+            <Mic size={16} /> Caso Clínico Interactivo
+          </div>
+          <p className="text-lg text-white font-medium italic">
+            "Interactúa con el paciente virtual y toma decisiones clínicas en tiempo real."
+          </p>
+          <p className="text-[10px] text-slate-500 font-medium leading-relaxed max-w-lg mx-auto uppercase tracking-widest">
+            Este caso clínico es interactivo y basado en Inteligencia Artificial. El avatar te hará preguntas mediante voz para simular una consulta real.
+          </p>
         </div>
       </div>
     </section>
