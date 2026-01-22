@@ -14,8 +14,7 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: "¿Por qué?", href: "#por-que" },
-    { name: "Dinámica", href: "#dinamica" },
+    { name: "¿Por qué este curso?", href: "#por-que" },
     { name: "Módulos", href: "#modulos" },
     { name: "Equipo", href: "#equipo" },
     { name: "Registro", href: "#registro" },
@@ -25,8 +24,8 @@ export default function Header() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md border-b py-3 shadow-sm" : "bg-transparent py-5"}`}>
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3">
-          <img src={mainLogo} alt="DA Expert Cases" className="h-12 w-auto" />
+        <a href="#" className="flex items-center gap-3 group">
+          <img src={mainLogo} alt="DA Expert Cases" className="h-12 w-auto transition-transform duration-500 group-hover:rotate-12" />
           <div className="flex flex-col leading-none">
             <span className="text-xl font-display font-extrabold text-[#294795]">Dermatitis Atópica</span>
             <span className="text-lg font-display font-medium text-[#5FABD1]">Expert Cases</span>
@@ -35,11 +34,11 @@ export default function Header() {
 
         <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map(link => (
-            <a key={link.name} href={link.href} className="text-sm font-bold text-slate-600 hover:text-primary transition-colors">
+            <a key={link.name} href={link.href} className="text-sm font-bold text-slate-600 hover:text-[#294795] hover:scale-105 transition-all">
               {link.name}
             </a>
           ))}
-          <Button className="bg-[#294795] hover:bg-[#294795]/90 text-white font-bold rounded-full px-8 shadow-md">
+          <Button className="bg-[#294795] hover:bg-[#294795]/90 text-white font-bold rounded-full px-8 shadow-md hover:scale-105 transition-transform">
             Iniciar Sesión
           </Button>
         </nav>

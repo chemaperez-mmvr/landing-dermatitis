@@ -15,30 +15,30 @@ export default function Hero() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8 animate-in fade-in slide-in-from-left-10 duration-700">
-              <div className="inline-block px-4 py-1 rounded-full bg-[#5FABD1]/10 text-[#5FABD1] text-xs font-bold uppercase tracking-widest border border-[#5FABD1]/20">
-                Experiencia Formativa Inclusiva
+              <div className="inline-block px-4 py-1 rounded-full bg-[#C3DC65]/10 text-[#C3DC65] text-xs font-bold uppercase tracking-widest border border-[#C3DC65]/20">
+                Cambiando el rumbo terapéutico
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-[#294795] leading-tight">
-                Formación inmersiva para la toma de decisiones clínicas en <span className="text-[#5FABD1]">dermatitis atópica compleja</span>
+                Dermatitis Atópica Expert Cases: <span className="text-[#5FABD1]">decisiones clínicas en la práctica real</span>
               </h1>
               <p className="text-lg text-slate-600 font-medium leading-relaxed max-w-xl">
                 Un programa diseñado para dar respuesta a las dudas reales del dermatólogo, proporcionando conocimientos y criterios aplicables al abordaje personalizado de la DA moderada a grave.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" className="bg-[#294795] text-white rounded-full text-lg px-12 h-14 font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-transform group">
-                  Solicitar Acceso Exclusivo
+                  Solicitar Registro
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full border-[#294795] text-[#294795] hover:bg-[#294795]/5 h-14 px-10 font-bold" asChild>
-                  <a href="#modulos">Ver Programa Académico</a>
+                <Button variant="outline" size="lg" className="rounded-full border-[#294795] text-[#294795] hover:bg-[#294795]/5 h-14 px-10 font-bold hover:scale-105 transition-transform" asChild>
+                  <a href="#modulos">Ver programa Académico</a>
                 </Button>
               </div>
             </div>
-            <div className="relative animate-in fade-in zoom-in-95 duration-1000">
-              <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white">
+            <div className="relative animate-in fade-in zoom-in-95 duration-1000 group">
+              <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white bg-white transition-transform duration-700 group-hover:scale-[1.02]">
                 <img src={platformMockup} alt="Plataforma interactiva" className="w-full h-auto" />
               </div>
-              <div className="absolute -z-10 -top-12 -right-12 w-full h-full border-2 border-[#5FABD1]/20 rounded-[2.5rem] translate-x-4 translate-y-4" />
+              <div className="absolute -z-10 -top-12 -right-12 w-full h-full border-2 border-[#C3DC65]/20 rounded-[2.5rem] translate-x-4 translate-y-4" />
             </div>
           </div>
         </div>
@@ -48,17 +48,17 @@ export default function Hero() {
       <section className="py-12 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity">
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-2 group cursor-default">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Organizado por</span>
-              <img src={amirLogo} alt="Fundación AMIR" className="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition-all" />
+              <img src={amirLogo} alt="Fundación AMIR" className="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" />
             </div>
-            <div className="flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center gap-2 group cursor-default">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Con la colaboración de</span>
-              <img src={pfizerLogo} alt="Pfizer" className="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition-all" />
+              <img src={pfizerLogo} alt="Pfizer" className="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" />
             </div>
-            <div className="col-span-2 md:col-span-1 flex flex-col items-center gap-2">
+            <div className="col-span-2 md:col-span-1 flex flex-col items-center gap-2 group cursor-default">
               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Revisado por</span>
-              <img src={academiaLogo} alt="AEDV" className="h-10 md:h-14 w-auto grayscale hover:grayscale-0 transition-all" />
+              <img src={academiaLogo} alt="AEDV" className="h-10 md:h-14 w-auto grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" />
             </div>
           </div>
         </div>
