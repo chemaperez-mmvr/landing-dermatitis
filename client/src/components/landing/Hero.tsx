@@ -25,9 +25,8 @@ export default function Hero() {
                 Un programa diseñado para dar respuesta a las dudas reales del dermatólogo, proporcionando conocimientos y criterios aplicables al abordaje personalizado de la DA moderada a grave.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="bg-[#294795] text-white rounded-full text-lg px-12 h-14 font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-transform group">
-                  Solicitar Registro
-                  <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                <Button size="lg" className="bg-[#294795] text-white rounded-full text-lg px-12 h-14 font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-transform group" asChild>
+                  <a href="#registro">Solicitar Registro</a>
                 </Button>
                 <Button variant="outline" size="lg" className="rounded-full border-[#294795] text-[#294795] hover:bg-[#294795]/5 h-14 px-10 font-bold hover:scale-105 transition-transform" asChild>
                   <a href="#modulos">Ver programa Académico</a>
