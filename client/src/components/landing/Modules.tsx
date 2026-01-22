@@ -1,5 +1,6 @@
 import { Video, FileDown, Mic, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Modules() {
   const modules = [
