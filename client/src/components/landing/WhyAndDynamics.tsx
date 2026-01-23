@@ -1,5 +1,5 @@
 import { Bot, Layers, BookOpen, Mic, Video, FileDown } from "lucide-react";
-import doctorDesk from "@assets/illustrations/doctor-desk.png";
+import doctorDesk from "../../assets/illustrations/doctor-desk.png";
 
 export default function WhyAndDynamics() {
   const features = [
