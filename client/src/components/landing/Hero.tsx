@@ -3,6 +3,7 @@ import platformMockup from "@assets/Screenshot_(73)_1768982263625.png";
 import amirLogo from "@assets/fundacion_amir_1769085523593.jpeg";
 import pfizerLogo from "@assets/logo-pfizer-scaled-675x675_1769085568344.jpg";
 import academiaLogo from "@assets/logo_academia_española_de_dermatologia_logo_1769085364557.png";
+import medicalExpert from "@assets/illustrations/medical-expert.png";
 
 export default function Hero() {
   return (
@@ -11,6 +12,7 @@ export default function Hero() {
         {/* Visual curves from PDF */}
         <div className="absolute top-0 right-0 w-2/3 h-full bg-[#294795]/5 pdf-curve -z-10" />
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-[#C3DC65]/10 rounded-full blur-3xl -z-10" />
+        <img src={medicalExpert} alt="Ilustración médica" className="absolute bottom-0 right-0 w-72 opacity-10 pointer-events-none hidden lg:block" />
         
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -10,9 +10,9 @@ export default function Access() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-5xl mx-auto rounded-[3rem] bg-white shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
           <div className="lg:w-1/2 p-12 bg-[#294795] text-white flex flex-col justify-center space-y-8 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#C3DC65]/20 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#C3DC65]/40 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700" />
             <div className="relative z-10 space-y-6">
-              <h2 className="text-4xl font-black leading-tight text-white drop-shadow-sm">
+              <h2 className="text-4xl font-black leading-tight text-white drop-shadow-lg drop-shadow-white/20">
                 Accede al curso Dermatitis Atópica Expert Cases
               </h2>
               <p className="text-lg text-slate-200 font-medium leading-relaxed">
