@@ -1,8 +1,8 @@
-import pabloImg from "../../assets/team/pablo.png";
-import trinidadImg from "../../assets/team/trinidad.png";
-import danielImg from "../../assets/team/daniel.png";
-import monicaImg from "../../assets/team/monica.png";
-import rubenImg from "../../assets/team/ruben.png";
+import pabloImg from "@assets/Dr_Pablo_Cueva_1769158374569.jpg";
+import trinidadImg from "@assets/Trinidad_Montero_Vilchez_1769158374573.jpg";
+import danielImg from "@assets/Daniel_Gonzalez_Vilas_1769158374559.jpg";
+import monicaImg from "@assets/Monica_Munera_Campos_1769158374571.jpeg";
+import rubenImg from "@assets/Ruben_Garcia_Castro_1769158374572.jpeg";
 
 export default function Team() {
   const authors = [

@@ -1,6 +1,4 @@
 import { Bot, Layers, BookOpen, Mic, Video, FileDown } from "lucide-react";
-import doctorDesk from "../../assets/illustrations/doctor-desk.png";
-
 export default function WhyAndDynamics() {
   const features = [
     { icon: Layers, text: "4 módulos de especialización" },
@@ -39,7 +37,6 @@ export default function WhyAndDynamics() {
           </div>
 
           <div className="bg-white rounded-[3rem] p-10 shadow-xl border border-slate-100 relative overflow-hidden group">
-            <img src={doctorDesk} alt="Ilustración médica" className="absolute -bottom-10 -right-10 w-64 opacity-20 pointer-events-none group-hover:scale-110 transition-transform duration-700" />
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#C3DC65]/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
             <div className="space-y-8 relative z-10">
               <h3 className="text-xs font-black text-[#5FABD1] uppercase tracking-[0.3em]">Metodología en cada módulo</h3>
