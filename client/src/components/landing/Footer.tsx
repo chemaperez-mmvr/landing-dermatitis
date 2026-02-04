@@ -1,8 +1,12 @@
+import { useState } from "react";
 import amirLogo from "@assets/fundacion_amir_1769085523593.jpeg";
 import pfizerLogo from "@assets/logo-pfizer-scaled-675x675_1769085568344.jpg";
 import academiaLogo from "@assets/logo_academia_española_de_dermatologia_logo_1769085364557.png";
+import LegalModal from "./LegalModals";
 
 export default function Footer() {
+  const [modalType, setModalType] = useState<"privacy" | "legal" | null>(null);
+
   return (
     <footer className="py-24 bg-white border-t border-slate-100">
       <div className="container mx-auto px-4 md:px-6">
@@ -36,12 +40,27 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-8 text-xs font-black text-slate-400 uppercase tracking-widest">
-            <a href="#" className="hover:text-primary transition-colors">Aviso Legal</a>
-            <a href="#" className="hover:text-primary transition-colors">Privacidad</a>
-            <a href="#" className="hover:text-primary transition-colors">Cookies</a>
+            <button 
+              onClick={() => setModalType("legal")}
+              className="hover:text-primary transition-colors uppercase"
+            >
+              Aviso Legal
+            </button>
+            <button 
+              onClick={() => setModalType("privacy")}
+              className="hover:text-primary transition-colors uppercase"
+            >
+              Privacidad
+            </button>
           </div>
         </div>
       </div>
+
+      <LegalModal 
+        isOpen={modalType !== null} 
+        onClose={() => setModalType(null)} 
+        type={modalType || "privacy"} 
+      />
     </footer>
   );
 }

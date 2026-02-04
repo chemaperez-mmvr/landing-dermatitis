@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import LegalModal from "./LegalModals";
 
 export default function Access() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
   return (
     <section id="registro" className="py-24 bg-[#FCFBFB] relative overflow-hidden">
       {/* Background decoration */}
@@ -89,7 +93,7 @@ export default function Access() {
                 <div className="flex items-start space-x-3 group">
                   <Checkbox id="consent-1" className="mt-1 border-slate-300 data-[state=checked]:bg-[#294795] data-[state=checked]:border-[#294795]" />
                   <label htmlFor="consent-1" className="text-[11px] leading-relaxed text-slate-600 font-medium cursor-pointer group-hover:text-slate-900 transition-colors">
-                    Declaro que he leído y acepto la política de Privacidad de Inspira Network S.L.U
+                    Declaro que he leído y acepto la <button type="button" onClick={() => setShowPrivacy(true)} className="text-[#294795] font-black underline hover:text-[#5FABD1]">política de Privacidad</button> de Inspira Network S.L.U
                   </label>
                 </div>
 
@@ -113,6 +117,12 @@ export default function Access() {
           </div>
         </div>
       </div>
+
+      <LegalModal 
+        isOpen={showPrivacy} 
+        onClose={() => setShowPrivacy(false)} 
+        type="privacy" 
+      />
     </section>
   );
 }
