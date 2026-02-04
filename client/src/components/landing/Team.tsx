@@ -13,10 +13,10 @@ export default function Team() {
   ];
 
   return (
-    <section id="equipo" className="py-24 bg-[#FCFBFB]">
+    <section id="comite" className="py-24 bg-[#FCFBFB]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-20 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-display font-black text-primary uppercase">Equipo Docente</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-black text-primary uppercase">Comité científico</h2>
           <div className="accent-line w-20 mx-auto" />
         </div>
         

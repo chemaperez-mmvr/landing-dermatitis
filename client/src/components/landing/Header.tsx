@@ -16,7 +16,7 @@ export default function Header() {
   const navLinks = [
     { name: "¿Por qué este curso?", href: "#por-que" },
     { name: "Módulos", href: "#modulos" },
-    { name: "Equipo", href: "#equipo" },
+    { name: "Comité científico", href: "#comite" },
     { name: "Registro", href: "#registro" },
     { name: "FAQs", href: "#faq" },
   ];
