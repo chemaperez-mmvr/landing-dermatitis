@@ -1,10 +1,6 @@
 server/
 migrations/
-script/
-*.config.ts
-!vite.config.ts
-!tsconfig.json
-drizzle.config.ts
 .replit
 .local
 .git
+node_modules
