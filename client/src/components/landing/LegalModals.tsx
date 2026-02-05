@@ -74,8 +74,8 @@ export default function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-w-2xl max-h-[80vh] flex flex-col rounded-[2rem] border-none shadow-2xl overflow-hidden">
-        <DialogHeader className="px-8 pt-8 pb-4">
+      <DialogContent className="max-w-2xl max-h-[90vh] flex flex-col rounded-[2rem] border-none shadow-2xl overflow-hidden p-0">
+        <DialogHeader className="px-8 pt-8 pb-4 shrink-0">
           <DialogTitle className="text-2xl font-display font-black text-[#294795]">
             {content[type].title}
           </DialogTitle>
@@ -83,9 +83,9 @@ export default function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
             DA Expert Cases • Información Legal
           </DialogDescription>
         </DialogHeader>
-        <ScrollArea className="flex-1 px-8 pb-8">
+        <div className="flex-1 overflow-y-auto px-8 pb-8 custom-scrollbar">
           {content[type].body}
-        </ScrollArea>
+        </div>
       </DialogContent>
     </Dialog>
   );
