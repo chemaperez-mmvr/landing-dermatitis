@@ -38,9 +38,11 @@ export default function Header() {
               {link.name}
             </a>
           ))}
-          <Button className="bg-[#294795] hover:bg-[#294795]/90 text-white font-bold rounded-full px-8 shadow-md hover:scale-105 transition-transform">
-            Iniciar Sesión
-          </Button>
+          <a href="https://app.daexpertcase.com/login">
+            <Button className="bg-[#294795] hover:bg-[#294795]/90 text-white font-bold rounded-full px-8 shadow-md hover:scale-105 transition-transform">
+              Iniciar Sesión
+            </Button>
+          </a>
         </nav>
 
         <button className="lg:hidden text-primary" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
