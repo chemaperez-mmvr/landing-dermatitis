@@ -1,6 +1,6 @@
 //const API_BASE = "https://ai-platform-api.metamedicsvr.com/api";
 const API_BASE = "http://localhost:8000/api"
-const CLASSROOM_CODE = "za2oAR";
+const CLASSROOM_ID = "6ecaa1a5-fed3-40d9-a9b7-10e96bd7266b";
 
 export class ApiError extends Error {
   status: number;
@@ -44,20 +44,17 @@ async function apiFetch<T>(
 
 /** Obtiene un token de registro para el aula */
 export async function getRegistrationToken(): Promise<string> {
-  // La spec OpenAPI muestra { code }, pero el backend puede devolver { token }.
-  // Se intenta ambos campos por compatibilidad.
-  const data = await apiFetch<{ token?: string; code?: string }>(
+  const data = await apiFetch<{ token: string }>(
     "/classrooms/register-token/",
     {
       method: "POST",
-      body: JSON.stringify({ code: CLASSROOM_CODE }),
+      body: JSON.stringify({ classroom_id: CLASSROOM_ID }),
     },
   );
-  const token = data.token ?? data.code;
-  if (!token) {
+  if (!data.token) {
     throw new Error("No se recibió token de registro");
   }
-  return token;
+  return data.token;
 }
 
 /** Registra un nuevo usuario */
