@@ -1,5 +1,4 @@
-//const API_BASE = "https://ai-platform-api.metamedicsvr.com/api";
-const API_BASE = "http://localhost:8000/api"
+const API_BASE = "https://ai-platform-api.metamedicsvr.com/api";
 const CLASSROOM_ID = "6ecaa1a5-fed3-40d9-a9b7-10e96bd7266b";
 
 export class ApiError extends Error {
