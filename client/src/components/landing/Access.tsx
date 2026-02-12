@@ -39,7 +39,8 @@ const inputClasses = "rounded-xl border-slate-200 h-12 focus:ring-[#C3DC65] focu
 function parseApiErrors(body: unknown): string {
   if (typeof body === "object" && body !== null) {
     const messages: string[] = [];
-    for (const [, value] of Object.entries(body)) {
+    for (const [key, value] of Object.entries(body)) {
+      if (key === "code") continue;
       if (Array.isArray(value)) {
         messages.push(...value.map(String));
       } else if (typeof value === "string") {
@@ -365,7 +366,7 @@ export default function Access() {
                             onClick={() => field.onChange(!field.value)}
                             className="text-[11px] leading-relaxed text-slate-600 font-medium cursor-pointer group-hover:text-slate-900 transition-colors"
                           >
-                            Consiento que Inspira Network S.L.U comunique a la AEDV mis datos personales (de contacto y profesionales) para recibir comunicaciones comerciales, incluso por medios electrónicos, relativas a información científica, promocional, institucional, formativa, así como de productos y servicios, de conformidad con mis preferencias. En la política de privacidad se facilita información sobre el tratamiento de mis datos personales y cómo puedo ejercer mis derechos de acceso, rectificación, supresión, retirada del consentimiento, entre otros
+                            Consiento que Inspira Network S.L.U comunique a la Laboratorios Pfizer mis datos personales (de contacto y profesionales) para recibir comunicaciones comerciales, incluso por medios electrónicos, relativas a información científica, promocional, institucional, formativa, así como de productos y servicios, de conformidad con mis preferencias. En la política de privacidad se facilita información sobre el tratamiento de mis datos personales y cómo puedo ejercer mis derechos de acceso, rectificación, supresión, retirada del consentimiento, entre otros
                           </label>
                         </div>
                       </FormItem>
