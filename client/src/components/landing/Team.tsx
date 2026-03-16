@@ -29,7 +29,7 @@ export default function Team() {
               <h3 className="text-4xl font-black text-primary leading-tight">Dr. Pablo de la Cueva</h3>
             </div>
             <p className="text-lg text-slate-600 font-medium leading-relaxed">
-              Jefe de Servicio de Dermatología, Hospital Infanta Leonor de Madrid. Vicepresidente de la AEDV. Presidente SCAEDV. Profesor Medicina Universidad Complutense de Madrid.
+              Jefe de Servicio de Dermatología, Hospital General Universitario Gregorio Marañón, Madrid. Vicepresidente de la AEDV. Presidente SCAEDV. Profesor Medicina Universidad Complutense de Madrid.
             </p>
           </div>
         </div>

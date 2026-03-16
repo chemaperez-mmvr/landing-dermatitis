@@ -51,7 +51,7 @@ export default function Hero() {
               <img src={amirLogo} alt="Fundación AMIR" className="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" />
             </div>
             <div className="flex flex-col items-center gap-2 group cursor-default">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Con la colaboración de</span>
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Con la financiación independiente de</span>
               <img src={pfizerLogo} alt="Pfizer" className="h-12 md:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-500 group-hover:scale-110" />
             </div>
             <div className="col-span-2 md:col-span-1 flex flex-col items-center gap-2 group cursor-default">
