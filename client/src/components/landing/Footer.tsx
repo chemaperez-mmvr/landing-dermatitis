@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="space-y-6">
-            <span className="text-xs font-black text-slate-400 uppercase tracking-widest">Con la colaboración independiente de:</span>
+            <span className="text-xs font-black text-slate-400 uppercase tracking-widest">Con la financiación independiente de:</span>
             <div className="h-24 flex items-center justify-center">
               <img src={pfizerLogo} alt="Pfizer" className="max-h-full w-auto" />
             </div>

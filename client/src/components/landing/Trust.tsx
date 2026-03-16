@@ -12,7 +12,7 @@ export default function Trust() {
             <img src={amirLogo} alt="Fundación AMIR" className="h-24 mx-auto object-contain" />
           </div>
           <div className="space-y-6">
-            <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">Con la colaboración independiente de:</p>
+            <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">Con la financiación independiente de:</p>
             <img src={pfizerLogo} alt="Pfizer" className="h-24 mx-auto object-contain" />
           </div>
           <div className="space-y-6">
