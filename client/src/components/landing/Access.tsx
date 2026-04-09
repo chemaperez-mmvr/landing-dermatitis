@@ -142,7 +142,7 @@ export default function Access() {
               <div className="pt-4 flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-sm font-bold text-[#C3DC65]">
                   <div className="w-2 h-2 rounded-full bg-[#C3DC65] animate-pulse" />
-                  Inicio: Febrero 2026
+                  Inicio: 20 de Abril de 2026
                 </div>
                 <div className="flex items-center gap-3 text-sm font-bold text-slate-300">
                   <div className="w-2 h-2 rounded-full bg-slate-400" />

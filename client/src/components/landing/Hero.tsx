@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import platformMockup from "@assets/Screenshot_(73)_1768982263625.png";
-import amirLogo from "@assets/fundacion_amir_1769085523593.jpeg";
-import pfizerLogo from "@assets/logo-pfizer-scaled-675x675_1769085568344.jpg";
+import amirLogo from "@assets/AMIR.png";
+import pfizerLogo from "@assets/Pfizer.svg";
 import academiaLogo from "@assets/logo_academia_española_de_dermatologia_logo_1769085364557.png";
 export default function Hero() {
   return (
